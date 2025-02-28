@@ -53,7 +53,8 @@ public class SecurityConfig {
                         session.sessionCreationPolicy(
                                 SessionCreationPolicy.STATELESS)
         );
-        http.exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler));
+        http.exceptionHandling(exception ->
+                exception.authenticationEntryPoint(unauthorizedHandler));
         //http.httpBasic(withDefaults());
         http.headers(headers -> headers
                 .frameOptions(frameOptions -> frameOptions
